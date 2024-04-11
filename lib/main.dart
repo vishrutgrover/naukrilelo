@@ -6,10 +6,10 @@ import 'package:naukrilelo/what.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginPage(),
+    home: const LoginPage(),
     routes: {
-      'SignIn': (context) => SignInPage(),
-      'whatwedo': (context) => WhatWeDoPage(),
+      'SignIn': (context) => const SignInPage(),
+      'whatwedo': (context) => const WhatWeDoPage(),
     },
   ));
 }

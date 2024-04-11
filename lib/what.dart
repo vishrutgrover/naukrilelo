@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 // import 'package:lawy/chatPage.dart';
 
 class WhatWeDoPage extends StatefulWidget {
+  const WhatWeDoPage({super.key});
+
   @override
   _WhatWeDoPageState createState() => _WhatWeDoPageState();
 }
@@ -15,14 +17,14 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 216, 255, 186),
+      backgroundColor: const Color.fromARGB(255, 216, 255, 186),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -45,8 +47,8 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "Your one-stop solution for finding your career...",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -55,8 +57,8 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 fontFamily: 'Days One',
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "Find  ",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -66,7 +68,7 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
+            const Text(
               "your perfect job mathc, with just a single search!",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -75,8 +77,8 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 fontFamily: 'Days One',
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               "Learn  ",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -86,7 +88,7 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
+            const Text(
               "about relevant skillsets for your dream job!",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -95,8 +97,8 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 fontFamily: 'Days One',
               ),
             ),
-            SizedBox(height: 20),
-            Row(
+            const SizedBox(height: 20),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -129,7 +131,7 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                 ),
               ],
             ),
-            SizedBox(height: 80),
+            const SizedBox(height: 80),
             ElevatedButton(
               onPressed: () {
                   // Navigator.push(
@@ -138,10 +140,10 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
                   // );
                 },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF5661F6),
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                backgroundColor: const Color(0xFF5661F6),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
               ),
-              child: Text(
+              child: const Text(
                 'Start Today!',
                 style: TextStyle(
                   fontSize: 25,
