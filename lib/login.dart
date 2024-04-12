@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 0, 0, 0),
+                      backgroundColor: Color.fromARGB(255, 0, 0, 0),
                       padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                     ),
                     child: Text(
