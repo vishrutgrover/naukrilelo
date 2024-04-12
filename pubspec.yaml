@@ -13,6 +13,7 @@ dependencies:
   open_file: ^3.0.2
   path_provider: ^2.0.1
   http: ^0.13.3
+  carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
 
@@ -27,3 +28,5 @@ flutter:
     - assets/images/email.svg
     - assets/images/google.svg
     - assets/images/facebook.svg
+    - assets/images/background.svg
+    - assets/images/back.jpg

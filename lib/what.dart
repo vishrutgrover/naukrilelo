@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:naukrilelo/job.dart';
 // import 'package:lawy/chatPage.dart';
 
 class WhatWeDoPage extends StatefulWidget {
@@ -134,10 +135,10 @@ class _WhatWeDoPageState extends State<WhatWeDoPage> {
             const SizedBox(height: 80),
             ElevatedButton(
               onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => ChatPage()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CarouselDemo()),
+                  );
                 },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF5661F6),

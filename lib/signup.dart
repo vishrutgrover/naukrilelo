@@ -69,7 +69,18 @@ class _SignInPageState extends State<SignInPage> {
       //   title: Text('Sign In'),
       // ),
       body: SingleChildScrollView(
+<<<<<<< HEAD
         padding: const EdgeInsets.all(20.0),
+=======
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/back.jpg'),
+              fit: BoxFit.cover, // Adjust this according to your needs
+            ),
+          ),
+        padding: EdgeInsets.all(20.0),
+>>>>>>> 486645f (new stuff)
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -149,7 +160,7 @@ class _SignInPageState extends State<SignInPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset(
-                          'assets/email.svg', // Replace with your SVG asset path
+                          'assets/images/email.svg', // Replace with your SVG asset path
                           width: 48,
                           height: 48,
                         ),
@@ -188,7 +199,7 @@ class _SignInPageState extends State<SignInPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset(
-                          'assets/google.svg', // Replace with your SVG asset path
+                          'assets/images/google.svg', // Replace with your SVG asset path
                           width: 48,
                           height: 48,
                         ),
@@ -227,7 +238,7 @@ class _SignInPageState extends State<SignInPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset(
-                          'assets/facebook.svg', // Replace with your SVG asset path
+                          'assets/images/facebook.svg', // Replace with your SVG asset path
                           width: 48,
                           height: 48,
                         ),
@@ -246,6 +257,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ],
         ),
+      ),
       ),
     );
   }
