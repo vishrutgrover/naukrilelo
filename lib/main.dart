@@ -7,16 +7,11 @@ import 'package:naukrilelo/what.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: const LoginPage(),
+    home: LoginPage(),
     routes: {
-<<<<<<< HEAD
-      'SignIn': (context) => const SignInPage(),
-      'whatwedo': (context) => const WhatWeDoPage(),
-=======
       'SignIn': (context) => SignInPage(),
       'whatwedo': (context) => WhatWeDoPage(),
       'jobcarousel': (context) => CarouselDemo(),
->>>>>>> 486645f (new stuff)
     },
   ));
 }

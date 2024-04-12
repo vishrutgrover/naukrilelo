@@ -5,8 +5,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({super.key});
-
   @override
   _SignInPageState createState() => _SignInPageState();
 }
@@ -14,7 +12,7 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   String email = '';
   String password = '';
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  GoogleSignIn _googleSignIn = GoogleSignIn();
 
   Future<void> _handleSignIn() async {
     try {
@@ -64,14 +62,11 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 216, 255, 186),
+      backgroundColor: Color.fromARGB(255, 216, 255, 186),
       // appBar: AppBar(
       //   title: Text('Sign In'),
       // ),
       body: SingleChildScrollView(
-<<<<<<< HEAD
-        padding: const EdgeInsets.all(20.0),
-=======
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
@@ -80,11 +75,10 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
         padding: EdgeInsets.all(20.0),
->>>>>>> 486645f (new stuff)
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 60.0),
+            SizedBox(height: 60.0),
             // ClipOval(
             //   child: Image.asset(
             //     'assets/logo.png',
@@ -94,8 +88,8 @@ class _SignInPageState extends State<SignInPage> {
             //     fit: BoxFit.fitHeight,
             //   ),
             // ),
-            const SizedBox(height: 20.0),
-            const Text(
+            SizedBox(height: 20.0),
+            Text(
               'Sign In',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -103,18 +97,18 @@ class _SignInPageState extends State<SignInPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0),
             TextField(
               onChanged: (value) {
                 setState(() {
                   email = value;
                 });
               },
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Email Address *',
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0),
             TextField(
               obscureText: true,
               onChanged: (value) {
@@ -122,18 +116,18 @@ class _SignInPageState extends State<SignInPage> {
                   password = value;
                 });
               },
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Password *',
               ),
             ),
-            const SizedBox(height: 20.0),
-            const Text(
+            SizedBox(height: 20.0),
+            Text(
               'By registering for an account, you are consenting to our Terms of Service and confirming that you have reviewed and accepted the Global Privacy Statement.',
               style: TextStyle(
                 fontSize: 12.0,
               ),
             ),
-            const SizedBox(height: 50.0),
+            SizedBox(height: 50.0),
             Row(
               children: [
                 Expanded(
@@ -141,21 +135,9 @@ class _SignInPageState extends State<SignInPage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const WhatWeDoPage()),
+                        MaterialPageRoute(builder: (context) => WhatWeDoPage()),
                       );
                     },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.transparent,
-                    ).copyWith(
-                      side: MaterialStateProperty.resolveWith<BorderSide>(
-                        (Set<MaterialState> states) {
-                          return const BorderSide(
-                            color: Colors.black, // Border color
-                            width: 2, // Border width
-                          );
-                        },
-                      ),
-                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -164,8 +146,8 @@ class _SignInPageState extends State<SignInPage> {
                           width: 48,
                           height: 48,
                         ),
-                        const SizedBox(width: 10.0),
-                        const Text(
+                        SizedBox(width: 10.0),
+                        Text(
                           'Continue with Email',
                           style: TextStyle(
                             color: Colors.black,
@@ -173,28 +155,28 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                       ],
                     ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              children: [
-                Expanded(
-                  child: TextButton(
-                    onPressed: _handleSignIn,
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.transparent,
                     ).copyWith(
                       side: MaterialStateProperty.resolveWith<BorderSide>(
                         (Set<MaterialState> states) {
-                          return const BorderSide(
+                          return BorderSide(
                             color: Colors.black, // Border color
                             width: 2, // Border width
                           );
                         },
                       ),
                     ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              children: [
+                Expanded(
+                  child: TextButton(
+                    onPressed: _handleSignIn,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -203,8 +185,8 @@ class _SignInPageState extends State<SignInPage> {
                           width: 48,
                           height: 48,
                         ),
-                        const SizedBox(width: 10.0),
-                        const Text(
+                        SizedBox(width: 10.0),
+                        Text(
                           'Continue with Google',
                           style: TextStyle(
                             color: Colors.black,
@@ -212,28 +194,28 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                       ],
                     ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              children: [
-                Expanded(
-                  child: TextButton(
-                    onPressed: _signInWithFacebook,
                     style: TextButton.styleFrom(
                       backgroundColor: Colors.transparent,
                     ).copyWith(
                       side: MaterialStateProperty.resolveWith<BorderSide>(
                         (Set<MaterialState> states) {
-                          return const BorderSide(
+                          return BorderSide(
                             color: Colors.black, // Border color
                             width: 2, // Border width
                           );
                         },
                       ),
                     ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10.0),
+            Row(
+              children: [
+                Expanded(
+                  child: TextButton(
+                    onPressed: _signInWithFacebook,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -242,14 +224,26 @@ class _SignInPageState extends State<SignInPage> {
                           width: 48,
                           height: 48,
                         ),
-                        const SizedBox(width: 10.0),
-                        const Text(
+                        SizedBox(width: 10.0),
+                        Text(
                           'Continue with Facebook',
                           style: TextStyle(
                             color: Colors.black,
                           ),
                         ),
                       ],
+                    ),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                    ).copyWith(
+                      side: MaterialStateProperty.resolveWith<BorderSide>(
+                        (Set<MaterialState> states) {
+                          return BorderSide(
+                            color: Colors.black, // Border color
+                            width: 2, // Border width
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
