@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:naukrilelo/job.dart';
-import 'package:naukrilelo/login.dart';
-import 'package:naukrilelo/signup.dart';
-import 'package:naukrilelo/what.dart';
+import 'package:naukrilelo/home.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginPage(),
-    routes: {
-      'SignIn': (context) => SignInPage(),
-      'whatwedo': (context) => WhatWeDoPage(),
-      'jobcarousel': (context) => CarouselDemo(),
-    },
+    home: HomePage(), // Here I keep the page i am currently working just to launch it first.
+    // In the final thing. We will have HomePage() here.
   ));
 }

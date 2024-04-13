@@ -20,13 +20,17 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  # flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/email.svg
-    - assets/images/google.svg
-    - assets/images/facebook.svg
-    - assets/images/background.svg
-    - assets/images/back.jpg
+    - assets/images/
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist-VariableFont_wght.ttf
+    - family: Blinker
+      fonts:
+        - asset: assets/fonts/Blinker-Bold.ttf
+        - asset: assets/fonts/Blinker-Regular.ttf
