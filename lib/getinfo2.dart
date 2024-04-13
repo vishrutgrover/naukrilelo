@@ -17,12 +17,26 @@ class GetInfo2 extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => GetInfo1()));
-          },
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 8.0, top: 8.0),
+          child: Container(
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              border: Border.all(color: Color(0xffE8ECF4), width: 3.0)
+            ),
+            child: Center(
+              child: IconButton(
+                icon: Icon(Icons.arrow_back_ios_new, size: 28, color: Colors.black,),
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => GetInfo1()));
+                },
+              ),
+            ),
+          ),
         ),
       ),
       body: Container(

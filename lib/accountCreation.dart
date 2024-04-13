@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:naukrilelo/actuallogin.dart';
+import 'package:naukrilelo/getinfo1.dart';
 import 'package:naukrilelo/register_intro.dart';
 
 class AccountCreation extends StatelessWidget {
@@ -29,9 +31,9 @@ class AccountCreation extends StatelessWidget {
                   child: Container(
                     width: 60,
                     decoration: BoxDecoration(
-                        color: Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                        border: Border.all(color: Color(0xffE8ECF4), width:3.0),
+                      color: Color(0xffFFFFFF),
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      border: Border.all(color: Color(0xffE8ECF4), width: 3.0),
                     ),
                     child: Center(
                       child: TextButton(
@@ -230,7 +232,12 @@ class AccountCreation extends StatelessWidget {
                         color: Color(0xff1C18DF),
                         borderRadius: BorderRadius.all(Radius.circular(5))),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GetInfo1()));
+                      },
                       child: const Text(
                         "Continue To Form",
                         style: TextStyle(
@@ -241,24 +248,39 @@ class AccountCreation extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      "Already have an account?",
-                      style: TextStyle(color: Colors.black, fontSize: 14),
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: MediaQuery.of(context).size.width * 0.04,
+                      top: MediaQuery.of(context).size.height * 0.02),
+                  child: Center(
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage1()));
+                      },
+                      child: RichText(
+                        text: TextSpan(children: <TextSpan>[
+                          TextSpan(
+                              text: 'Already have an account?',
+                              style: TextStyle(
+                                  fontFamily: 'Urbanist',
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black)),
+                          TextSpan(
+                              text: ' Login Now',
+                              style: TextStyle(
+                                  fontFamily: 'Urbanist',
+                                  fontSize: 15.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff1C18DF)))
+                        ]),
+                      ),
                     ),
-                    const SizedBox(
-                      width: 3,
-                    ),
-                    TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Login Now",
-                          style: TextStyle(color: Color(0xff1C18DF), fontSize: 14),
-                        ))
-                  ],
-                )
+                  ),
+                ),
               ],
             )),
       ),
