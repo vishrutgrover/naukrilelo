@@ -1,6 +1,6 @@
 # NaukriLelo
 
-The perfect job, for the perfect you!
+Unlocking Opportunities
 
 # Overview
 
