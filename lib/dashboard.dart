@@ -295,7 +295,7 @@ class _DashboardState extends State<Dashboard> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Epic Games', style: TextStyle(fontFamily: 'Blikner', fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff111C5B)),),
-                                Text('Bengaluru', style: TextStyle(fontFamily: 'Blikner', fontSize: 14, fontWeight: FontWeight.normal, color: const Color.fromARGB(255, 61, 61, 61)),),
+                                Text('Bengaluru', style: TextStyle(fontFamily: 'Blikner', fontSize: 14, fontWeight: FontWeight.normal, color: Colors.grey,),
                               ],
                             )
                           ],
