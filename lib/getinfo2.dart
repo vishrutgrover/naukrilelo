@@ -20,7 +20,8 @@ class GetInfo2 extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back button press
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => GetInfo1()));
           },
         ),
       ),
