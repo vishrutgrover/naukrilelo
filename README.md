@@ -20,8 +20,14 @@ UI/UX Desgin - Figma
 
 # Video Demo
 
-Drive Link: 
+https://youtu.be/WaWK_KR8idU
 
 # Snippets
 <br>
 <br>
+<img width="359" alt="Screenshot 2024-04-10 at 11 31 48 PM" src="https://github.com/vishrutgrover/naukrilelo/assets/10181816/5f465428-9398-4ef2-b536-88d41945f82a">
+<img width="368" alt="Screenshot 2024-04-10 at 11 14 02 PM" src="https://github.com/vishrutgrover/naukrilelo/assets/10181816/92f53c79-d7a5-4986-b1c0-a41ac4176e7b">
+<img width="365" alt="Screenshot 2024-04-10 at 11 30 35 PM" src="https://github.com/vishrutgrover/naukrilelo/assets/10181816/be138ee2-c51e-4b39-a696-e5949a80f52d">
+<img width="359" alt="Screenshot 2024-04-10 at 11 32 07 PM" src="https://github.com/vishrutgrover/naukrilelo/assets/10181816/a20376d5-3218-426a-8280-6379e9bbbec8">
+<img width="369" alt="Screenshot 2024-04-10 at 11 13 51 PM" src="https://github.com/vishrutgrover/naukrilelo/assets/10181816/509534df-b46f-46d6-9286-513ffdf1fd09">
+
