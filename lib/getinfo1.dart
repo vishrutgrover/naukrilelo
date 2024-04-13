@@ -1,11 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:naukrilelo/accountCreation.dart';
 import 'package:naukrilelo/getinfo2.dart';
-import 'package:naukrilelo/getinfo3.dart';
+
+class UserInfo {
+  final String name;
+  final int age;
+  final String gender;
+  final String cityOfResidence;
+  final String preferredCityOfEmployment;
+  // final String qual;
+  // final String college;
+  // final String major;
+
+  UserInfo({
+    required this.name,
+    required this.age,
+    required this.gender,
+    required this.cityOfResidence,
+    required this.preferredCityOfEmployment,
+    // required this.qual,
+    // required this.college,
+    // required this.major
+  });
+}
 
 class GetInfo1 extends StatelessWidget {
-  GetInfo1({super.key});
+  GetInfo1({Key? key}) : super(key: key);
 
   final TextEditingController _name = TextEditingController();
   final TextEditingController _age = TextEditingController();
@@ -26,16 +46,17 @@ class GetInfo1 extends StatelessWidget {
             height: 60,
             width: 60,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(12)),
-              border: Border.all(color: Color(0xffE8ECF4), width: 3.0)
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                border: Border.all(color: Color(0xffE8ECF4), width: 3.0)),
             child: Center(
               child: IconButton(
                 icon: Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AccountCreation()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AccountCreation()));
                   // Handle back button press
                 },
               ),
@@ -179,43 +200,44 @@ class GetInfo1 extends StatelessWidget {
                       ),
                       SizedBox(height: 40.0),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: ElevatedButton(
+                            onPressed: () {
+                              String name = _name.text;
+                              int age = int.tryParse(_age.text) ?? 0;
+                              String gender = _gender.text;
+                              String cityOfResidence = _cityofres.text;
+                              String preferredCityOfEmployment = _pref.text;
+
+                              UserInfo userInfo = UserInfo(
+                                name: name,
+                                age: age,
+                                gender: gender,
+                                cityOfResidence: cityOfResidence,
+                                preferredCityOfEmployment:
+                                    preferredCityOfEmployment,
+                              );
+
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => GetInfo1()),
-                                );
-                              },
-                              child: Text('1'),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GetInfo2()),
-                                );
-                              },
-                              child: Text('2'),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GetInfo3()),
-                                );
-                              },
-                              child: Text('3'),
-                            ),
-                          ],
-                        ),
-                      ),
+                                      builder: (context) =>
+                                          GetInfo2(userInfo: userInfo)));
+                            },
+                            child: Text('Continue To Sign Up',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontFamily: 'Blinker',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25)),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xff1C18DF),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.0)),
+                                side: BorderSide(
+                                    width: 1.0, color: Color(0xff111C5B)))),
+                      )
                     ],
                   ),
                 ),

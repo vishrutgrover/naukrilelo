@@ -4,13 +4,44 @@ import 'package:naukrilelo/dashboard.dart';
 import 'package:naukrilelo/getinfo2.dart';
 import 'package:naukrilelo/getinfo1.dart';
 
+class UserInfo {
+  String name;
+  int age;
+  String gender;
+  String cityOfResidence;
+  String preferredCityOfEmployment;
+  String qual;
+  String college;
+  String major;
+  String job;
+  String year;
+  String role;
+  String des;
+
+  UserInfo({
+    required this.name,
+    required this.age,
+    required this.gender,
+    required this.cityOfResidence,
+    required this.preferredCityOfEmployment,
+    required this.qual,
+    required this.college,
+    required this.major,
+    required this.job,
+    required this.year,
+    required this.role,
+    required this.des,
+  });
+}
+
 class GetInfo3 extends StatelessWidget {
-  GetInfo3({super.key});
+  GetInfo3({required this.userInfo, Key? key}) : super(key: key);
 
   final TextEditingController _job = TextEditingController();
   final TextEditingController _year = TextEditingController();
   final TextEditingController _role = TextEditingController();
   final TextEditingController _des = TextEditingController();
+  final UserInfo userInfo;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +56,19 @@ class GetInfo3 extends StatelessWidget {
             width: 60,
             height: 60,
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(12)),
-              border: Border.all(color: Color(0xffE8ECF4), width: 3.0)
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+                border: Border.all(color: Color(0xffE8ECF4), width: 3.0)),
             child: Center(
               child: IconButton(
-                icon: Icon(Icons.arrow_back_ios_new, size: 28, color: Colors.black,),
+                icon: Icon(
+                  Icons.arrow_back_ios_new,
+                  size: 28,
+                  color: Colors.black,
+                ),
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => GetInfo2()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => GetInfo2(userInfo: userInfo,)));
                 },
               ),
             ),
@@ -156,72 +190,36 @@ class GetInfo3 extends StatelessWidget {
                       ),
                       SizedBox(height: 40.0),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
+                        padding: EdgeInsets.only(
+                          left: MediaQuery.sizeOf(context).width * 0.03,
+                          top: MediaQuery.sizeOf(context).height * 0.05,
+                          right: MediaQuery.sizeOf(context).width * 0.03,
+                        ),
+                        child: SizedBox(
+                          height: 55.0,
+                          child: ElevatedButton(
+                            onPressed: () => {
+                              Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => GetInfo1()),
-                                );
-                              },
-                              child: Text('1'),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GetInfo2()),
-                                );
-                              },
-                              child: Text('2'),
-                            ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => GetInfo3()),
-                                );
-                              },
-                              child: Text('3'),
-                            ),
-                          ],
+                                      builder: (context) => Dashboard()))
+                            },
+                            child: Center(
+                                child: Text('Continue To Dashboard',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Blinker',
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25))),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xff1C18DF),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.0)),
+                                side: BorderSide(
+                                    width: 1.0, color: Color(0xff111C5B))),
+                          ),
                         ),
                       ),
-                      Padding(
-                padding: EdgeInsets.only(
-                    left: MediaQuery.sizeOf(context).width * 0.03,
-                    top: MediaQuery.sizeOf(context).height * 0.05,
-                    right: MediaQuery.sizeOf(context).width * 0.03,),
-                child: SizedBox(
-                  height: 55.0,
-                  child: ElevatedButton(
-                    onPressed: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Dashboard()))
-                    },
-                    child: Center(
-                        child: Text('Continue To Dashboard',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Blinker',
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25))),
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff1C18DF),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0)),
-                        side: BorderSide(width: 1.0, color: Color(0xff111C5B))),
-                  ),
-                ),
-              ),
                     ],
                   ),
                 ),
